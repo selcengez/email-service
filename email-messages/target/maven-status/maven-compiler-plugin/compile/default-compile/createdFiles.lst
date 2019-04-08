@@ -1,0 +1,4 @@
+com\example\poc\dto\WelcomeEmailRequest.class
+com\example\poc\dto\EmailRequestBase.class
+com\example\poc\dto\ForgotEmailRequest.class
+com\example\poc\dto\WeeklyNewsletterEmailRequest.class
