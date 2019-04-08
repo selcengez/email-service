@@ -24,7 +24,7 @@ public class ForgotPasswordListenerService {
 		SimpleMailMessage message = new SimpleMailMessage(); 
         message.setTo(emailRequest.getEmail()); 
         message.setSubject("Şifre yenileme"); 
-        message.setText("Şifrenizi yenilemek için aşağıdaki linke tıklayınız"+ emailRequest);
+        message.setText("Şifrenizi yenilemek için aşağıdaki linke tıklayınız"+ emailRequest.getPasswordResetUrl());
         emailSender.send(message);		
 	}
 }

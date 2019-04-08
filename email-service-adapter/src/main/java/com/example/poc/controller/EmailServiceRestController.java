@@ -35,6 +35,28 @@ public class EmailServiceRestController {
 		      },
 		  "serviceType": "WELCOME"
 	}
+	forgotPassword request
+	{
+		  "receivedAt": "2019-04-07T11:04:51.859Z",
+		  "requestData": { 
+		           "type": "forgot_email",
+		           "email": "selcen.tokluoglu@gmail.com",
+		           "passwordResetUrl": "passwordResetUrl"  
+		      },
+		  "serviceType": "FORGOT_PASSWORD"
+	}
+	newsletter request:  
+	{
+		  "receivedAt": "2019-04-07T11:04:51.859Z",
+		  "requestData": { 
+		           "type": "weekly_newsletter",
+		           "email": "selcen.tokluoglu@gmail.com",
+		           "firstName": "selcen",
+		           "lastName": "tokluoğlu",
+		           "newsletter":"Erken Rezervasyon Fırsatları"   
+		      },
+		  "serviceType": "WEEKLY_NEWSLATTER"
+	}
 	 */
 	@PostMapping
 	public void sendEmail(@RequestBody @Validated EmailCommand request) {

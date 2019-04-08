@@ -21,7 +21,6 @@ public class WelcomeEmailListenerService {
 		    exchange = @Exchange(value = "email", ignoreDeclarationExceptions = "true"),
 		    key = "WELCOME"))
 	public void listenMessage(WelcomeEmailRequest emailRequest) {
-		//EmailRequestBase instance of WelcomeEmailRequest
 		System.err.println(emailRequest);
 		SimpleMailMessage message = new SimpleMailMessage(); 
         message.setTo(emailRequest.getEmail()); 
